@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Nexus Digital Marketing</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#4f46e5', secondary: '#ec4899', dark: '#0f172a', light: '#f8fafc' }, fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex">
+
+    <!-- SIDEBAR -->
+    <aside class="hidden lg:flex flex-col w-64 h-screen fixed left-0 top-0 bg-slate-900 text-white z-50">
+        <div class="h-16 flex items-center px-6 border-b border-slate-800">
+            <a href="index.html" class="flex items-center gap-2">
+                <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white font-bold shadow-sm">
+                    N</div>
+                <span class="text-lg font-bold tracking-tight text-white">Admin<span
+                        class="text-indigo-400">.</span></span>
+            </a>
+        </div>
+
+        <div class="flex-grow overflow-y-auto py-6 px-4">
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4 px-3">Management</div>
+            <nav class="space-y-1 mb-8">
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2.5 bg-indigo-600/10 text-indigo-400 rounded-lg font-medium">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                        </path>
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                        </path>
+                    </svg>
+                    Clients
+                    <span class="ml-auto bg-indigo-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">12</span>
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                        </path>
+                    </svg>
+                    Campaigns
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                        </path>
+                    </svg>
+                    Reports
+                </a>
+            </nav>
+
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4 px-3">System</div>
+            <nav class="space-y-1">
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
+                        </path>
+                    </svg>
+                    Invoices
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    Settings
+                </a>
+            </nav>
+        </div>
+
+        <div class="p-4 border-t border-slate-800 bg-slate-800/50">
+            <div class="flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer">
+                <img src="https://ui-avatars.com/api/?name=Admin+User&background=0D8ABC&color=fff" alt="Admin"
+                    class="w-8 h-8 rounded-full">
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-medium text-white truncate">Admin User</p>
+                    <p class="text-xs text-slate-400 truncate">Super Admin</p>
+                </div>
+                <a href="login.html" class="text-slate-400 hover:text-red-400"><svg class="w-5 h-5" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
+                        </path>
+                    </svg></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="lg:pl-64 flex-1 flex flex-col h-screen overflow-hidden">
+
+        <!-- Mobile Header -->
+        <header
+            class="lg:hidden h-16 bg-slate-900 border-b border-slate-800 flex items-center justify-between px-4 z-40 text-white">
+            <a href="index.html" class="flex items-center gap-2">
+                <div
+                    class="w-6 h-6 rounded bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white font-bold text-xs">
+                    N</div>
+                <span class="font-bold">Admin</span>
+            </a>
+            <button class="text-slate-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg></button>
+        </header>
+
+        <!-- Topbar -->
+        <header
+            class="hidden lg:flex h-16 bg-white border-b border-slate-200 items-center justify-between px-8 z-40 sticky top-0">
+            <div class="relative w-96">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="h-5 w-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+                <input type="text"
+                    class="block w-full pl-10 pr-3 py-2 border border-slate-200 rounded-lg leading-5 bg-slate-50 placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-colors"
+                    placeholder="Search clients, campaigns, or reports...">
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="text-slate-400 hover:text-indigo-600 relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                        </path>
+                    </svg>
+                    <span class="absolute top-0 right-0 w-2 h-2 bg-pink-500 rounded-full"></span>
+                </button>
+                <button
+                    class="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    New Client
+                </button>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <main class="flex-1 overflow-y-auto p-4 md:p-8 bg-slate-50">
+
+            <div class="mb-8 flex justify-between items-end">
+                <div>
+                    <h1 class="text-2xl font-bold text-slate-900">Agency Overview</h1>
+                    <p class="text-slate-500 text-sm mt-1">Here's what's happening with your clients today.</p>
+                </div>
+            </div>
+
+            <!-- Global Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Stat 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center">
+                    <div
+                        class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 mr-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="text-sm text-slate-500 font-medium">Total Active Clients</div>
+                        <div class="text-2xl font-black text-slate-900">24</div>
+                    </div>
+                </div>
+                <!-- Stat 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center">
+                    <div
+                        class="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 mr-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="text-sm text-slate-500 font-medium">Monthly Recurring Revenue</div>
+                        <div class="text-2xl font-black text-slate-900">$124,500</div>
+                    </div>
+                </div>
+                <!-- Stat 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center">
+                    <div class="w-12 h-12 rounded-full bg-pink-50 flex items-center justify-center text-pink-500 mr-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="text-sm text-slate-500 font-medium">Total Managed Ad Spend</div>
+                        <div class="text-2xl font-black text-slate-900">$450K+</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client List Grid -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden mb-8">
+                <div class="p-6 border-b border-slate-100 flex justify-between items-center bg-white sticky top-0">
+                    <h2 class="text-lg font-bold text-slate-800">Recent Client Activity</h2>
+                    <button class="text-sm font-medium text-indigo-600 hover:text-indigo-800">View All Clients</button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-50 border-b border-slate-200">
+                                <th class="p-4 font-semibold text-slate-600 text-sm">Client Name</th>
+                                <th class="p-4 font-semibold text-slate-600 text-sm">Services</th>
+                                <th class="p-4 font-semibold text-slate-600 text-sm">Status</th>
+                                <th class="p-4 font-semibold text-slate-600 text-sm">Ad Spend Setup</th>
+                                <th class="p-4 font-semibold text-slate-600 text-sm text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm divide-y divide-slate-100">
+                            <!-- Client Row 1 -->
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-4">
+                                    <div class="flex items-center">
+                                        <div
+                                            class="h-10 w-10 flex-shrink-0 rounded-lg bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold border border-indigo-200">
+                                            A</div>
+                                        <div class="ml-4">
+                                            <div class="font-medium text-slate-900">Acme Corp</div>
+                                            <div class="text-slate-500 text-xs">acme.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="p-4">
+                                    <div class="flex gap-2">
+                                        <span
+                                            class="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">SEO</span>
+                                        <span
+                                            class="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">PPC</span>
+                                    </div>
+                                </td>
+                                <td class="p-4">
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        Active
+                                    </span>
+                                </td>
+                                <td class="p-4">
+                                    <div class="w-full bg-slate-200 rounded-full h-1.5 mb-1 max-w-[100px]">
+                                        <div class="bg-indigo-600 h-1.5 rounded-full" style="width: 80%"></div>
+                                    </div>
+                                    <span class="text-xs text-slate-500">$8K / $10K limit</span>
+                                </td>
+                                <td class="p-4 text-right">
+                                    <button class="text-slate-400 hover:text-indigo-600 px-2">Manage</button>
+                                </td>
+                            </tr>
+                            <!-- Client Row 2 -->
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-4">
+                                    <div class="flex items-center">
+                                        <div
+                                            class="h-10 w-10 flex-shrink-0 rounded-lg bg-pink-100 flex items-center justify-center text-pink-700 font-bold border border-pink-200">
+                                            G</div>
+                                        <div class="ml-4">
+                                            <div class="font-medium text-slate-900">Global Tech</div>
+                                            <div class="text-slate-500 text-xs">globaltech.io</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="p-4">
+                                    <div class="flex gap-2">
+                                        <span
+                                            class="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">Content</span>
+                                        <span
+                                            class="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">Social</span>
+                                    </div>
+                                </td>
+                                <td class="p-4">
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        Active
+                                    </span>
+                                </td>
+                                <td class="p-4">
+                                    <div class="w-full bg-slate-200 rounded-full h-1.5 mb-1 max-w-[100px]">
+                                        <div class="bg-pink-500 h-1.5 rounded-full" style="width: 45%"></div>
+                                    </div>
+                                    <span class="text-xs text-slate-500">$2.2K / $5K limit</span>
+                                </td>
+                                <td class="p-4 text-right">
+                                    <button class="text-slate-400 hover:text-indigo-600 px-2">Manage</button>
+                                </td>
+                            </tr>
+                            <!-- Client Row 3 -->
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-4">
+                                    <div class="flex items-center">
+                                        <div
+                                            class="h-10 w-10 flex-shrink-0 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 font-bold border border-amber-200">
+                                            V</div>
+                                        <div class="ml-4">
+                                            <div class="font-medium text-slate-900">Vortex Startup</div>
+                                            <div class="text-slate-500 text-xs">vortex.co</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="p-4">
+                                    <div class="flex gap-2">
+                                        <span
+                                            class="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">Web
+                                            Dev</span>
+                                    </div>
+                                </td>
+                                <td class="p-4">
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                        Onboarding
+                                    </span>
+                                </td>
+                                <td class="p-4">
+                                    <span class="text-xs text-slate-400 italic">Not set up</span>
+                                </td>
+                                <td class="p-4 text-right">
+                                    <button class="text-slate-400 hover:text-indigo-600 px-2">Manage</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <!-- Notifications/Tasks -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <h3 class="font-bold text-slate-800 mb-6">Action Items & Alerts</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-3 bg-red-50 rounded-xl border border-red-100">
+                            <div class="mt-0.5 text-red-500">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-slate-800">Acme Corp PPC Budget Alert</h4>
+                                <p class="text-xs text-slate-600 mt-1">Google Ads spend has reached 90% of the monthly
+                                    allocated budget.</p>
+                                <button class="mt-2 text-xs font-medium text-red-600 hover:underline">Review
+                                    budgets</button>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-3 bg-blue-50 rounded-xl border border-blue-100">
+                            <div class="mt-0.5 text-blue-500">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-slate-800">New lead: Vortex Startup</h4>
+                                <p class="text-xs text-slate-600 mt-1">Client requested a consultation for landing page
+                                    optimization.</p>
+                                <button class="mt-2 text-xs font-medium text-blue-600 hover:underline">View lead
+                                    details</button>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="mt-0.5 text-slate-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-slate-800">Monthly Reports Generated</h4>
+                                <p class="text-xs text-slate-600 mt-1">August reports have been automatically generated
+                                    for 18 active clients.</p>
+                                <button class="mt-2 text-xs font-medium text-slate-600 hover:underline">Send to
+                                    clients</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple Revenue Chart Placeholder -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="font-bold text-slate-800">Revenue Growth</h3>
+                        <span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full">+14%
+                            YTD</span>
+                    </div>
+                    <div
+                        class="flex-1 bg-slate-50 border border-slate-100 border-dashed rounded-xl flex items-center justify-center">
+                        <span class="text-slate-400 font-medium text-sm">[ Revenue Chart visualization ]</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-8 text-center text-xs text-slate-400">
+                &copy; 2026 Admin Dashboard Setup.
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

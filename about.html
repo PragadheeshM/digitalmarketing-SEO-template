@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Nexus Digital Marketing</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#4f46e5', secondary: '#ec4899', dark: '#0f172a', light: '#f8fafc' }, fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header id="navbar"
+        class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-pink-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        N
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-900">Nexus<span
+                            class="text-indigo-600">.</span></span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <!-- Home Dropdown -->
+                    <div class="nav-dropdown">
+                        <button
+                            class="nav-dropdown-btn flex items-center gap-1 text-slate-600 hover:text-indigo-600 font-medium transition-colors">
+                            Home
+                            <svg class="chevron w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown-menu">
+                            <a href="index.html">
+                                <span class="dd-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                        <polyline points="9 22 9 12 15 12 15 22" />
+                                    </svg></span>
+                                Home 1
+                            </a>
+                            <a href="index2.html">
+                                <span class="dd-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="7" height="7" />
+                                        <rect x="14" y="3" width="7" height="7" />
+                                        <rect x="14" y="14" width="7" height="7" />
+                                        <rect x="3" y="14" width="7" height="7" />
+                                    </svg></span>
+                                Home 2
+                            </a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-indigo-600 font-medium transition-colors">About</a>
+                    <a href="services.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Services</a>
+                    <a href="case-studies.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Case Studies</a>
+                    <a href="pricing.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Pricing</a>
+                    <a href="contact.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Contact</a>
+                    <!-- Dashboard Dropdown -->
+                    <div class="nav-dropdown">
+                        <button
+                            class="nav-dropdown-btn flex items-center gap-1 text-slate-600 hover:text-indigo-600 font-medium transition-colors">
+                            Dashboard
+                            <svg class="chevron w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown-menu">
+                            <a href="user-dashboard.html">
+                                <span class="dd-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
+                                    </svg></span>
+                                User Dashboard
+                            </a>
+                            <a href="admin-dashboard.html">
+                                <span class="dd-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                        <path d="M2 17l10 5 10-5" />
+                                        <path d="M2 12l10 5 10-5" />
+                                    </svg></span>
+                                Admin Dashboard
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Actions -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <button id="rtl-toggle"
+                        class="text-slate-500 hover:text-indigo-600 font-medium w-16 text-center transition-colors"></button>
+                    <a href="login.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors px-4 py-2">Login</a>
+                    <a href="signup.html"
+                        class="bg-slate-900 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-indigo-600 transition-colors shadow-lg btn-hover">Get
+                        Started</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-slate-600 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100">
+            <div class="flex flex-col p-4 space-y-2">
+                <!-- Home mobile dropdown -->
+                <div>
+                    <button
+                        class="mobile-dd-btn w-full flex items-center justify-between text-slate-600 font-medium px-4 py-2 hover:bg-slate-50 rounded-lg">
+                        Home
+                        <svg class="chevron w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="mobile-dd-content mt-1 space-y-1">
+                        <a href="index.html"
+                            class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">🏠 Home
+                            1</a>
+                        <a href="index2.html"
+                            class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">⊞ Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html"
+                    class="text-indigo-600 font-medium block px-4 py-2 bg-indigo-50 rounded-lg">About</a>
+                <a href="services.html"
+                    class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">Services</a>
+                <a href="case-studies.html"
+                    class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">Case Studies</a>
+                <a href="pricing.html"
+                    class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">Pricing</a>
+                <a href="contact.html"
+                    class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">Contact</a>
+                <!-- Dashboard mobile dropdown -->
+                <div>
+                    <button
+                        class="mobile-dd-btn w-full flex items-center justify-between text-slate-600 font-medium px-4 py-2 hover:bg-slate-50 rounded-lg">
+                        Dashboard
+                        <svg class="chevron w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="mobile-dd-content mt-1 space-y-1">
+                        <a href="user-dashboard.html"
+                            class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">👤 User
+                            Dashboard</a>
+                        <a href="admin-dashboard.html"
+                            class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">🛡️ Admin
+                            Dashboard</a>
+                    </div>
+                </div>
+                <div class="border-t border-slate-100 pt-4 flex flex-col gap-3">
+                    <a href="login.html"
+                        class="text-slate-600 font-medium block px-4 py-2 text-center border border-slate-200 rounded-lg">Login</a>
+                    <a href="signup.html"
+                        class="bg-indigo-600 text-white font-medium block px-4 py-2 text-center rounded-lg">Get
+                        Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-24">
+        <!-- PAGE HEADER -->
+        <section class="bg-slate-900 text-white py-20 relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-20">
+                <div
+                    class="absolute -top-24 -right-24 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl">
+                </div>
+            </div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">About Nexus</h1>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto">We are an independent digital agency that builds
+                    bold brand experiences and implements aggressive growth strategies.</p>
+            </div>
+        </section>
+
+        <!-- MISSION & VISION -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-sm font-bold text-indigo-600 uppercase tracking-widest mb-2">Our Mission</h2>
+                        <h3 class="text-3xl font-bold text-slate-900 mb-6">Empowering brands to dominate the digital
+                            landscape.</h3>
+                        <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+                            Since 2018, we have been obsessed with finding the intersection between stunning design and
+                            data-driven performance. We don't believe in vanity metrics; we believe in revenue growth.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            Our vision is to be the premier growth partner for ambitious companies worldwide. We achieve
+                            this by hiring top-tier talent, utilizing transparent reporting, and maintaining a culture
+                            of relentless innovation and split testing.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center">
+                            <div class="text-4xl font-black text-indigo-600 mb-2">120+</div>
+                            <div class="text-sm font-medium text-slate-500">Brands Scaled</div>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center translate-y-8">
+                            <div class="text-4xl font-black text-pink-500 mb-2">$50M+</div>
+                            <div class="text-sm font-medium text-slate-500">Revenue Generated</div>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center">
+                            <div class="text-4xl font-black text-indigo-600 mb-2">45</div>
+                            <div class="text-sm font-medium text-slate-500">Global Experts</div>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center translate-y-8">
+                            <div class="text-4xl font-black text-pink-500 mb-2">10</div>
+                            <div class="text-sm font-medium text-slate-500">Industry Awards</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE VALUES -->
+        <section class="py-24 bg-slate-50 border-y border-slate-200">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Our Core Values</h2>
+                    <p class="text-slate-600 text-lg">The principles that guide our work and shape our culture.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                        <div
+                            class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600 mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">Bias for Action</h4>
+                        <p class="text-slate-600">We move fast and deploy campaigns rapidly. Perfection is the enemy of
+                            progress; data teaches us the rest.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                        <div
+                            class="w-12 h-12 bg-pink-50 rounded-lg flex items-center justify-center text-pink-500 mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">Radical Transparency</h4>
+                        <p class="text-slate-600">No hidden fees, no opaque reporting. You see every metric, every win,
+                            and every lesson learned.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                        <div
+                            class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600 mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">Continuous Testing</h4>
+                        <p class="text-slate-600">The market shifts daily. We continuously A/B test creatives, landing
+                            pages, and audience targeting to stay ahead.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM SECTION -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Meet the Leadership</h2>
+                    <p class="text-slate-600 text-lg">The marketing veterans driving strategy at Nexus.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Team 1 -->
+                    <div class="text-center group">
+                        <div
+                            class="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 bg-slate-200 border-4 border-white shadow-lg">
+                            <div
+                                class="absolute inset-0 bg-slate-800 flex items-center justify-center text-white text-xs">
+                                Image Placeholder</div>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">Sarah Jenkins</h4>
+                        <p class="text-indigo-600 font-medium text-sm mb-3">CEO & Founder</p>
+                        <p class="text-slate-500 text-sm px-4">Former Head of Growth at ScaleTech, 10+ years in B2B SaaS
+                            acceleration.</p>
+                    </div>
+                    <!-- Team 2 -->
+                    <div class="text-center group">
+                        <div
+                            class="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 bg-slate-200 border-4 border-white shadow-lg">
+                            <div
+                                class="absolute inset-0 bg-slate-800 flex items-center justify-center text-white text-xs">
+                                Image Placeholder</div>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">Michael Chen</h4>
+                        <p class="text-pink-500 font-medium text-sm mb-3">VP of Search</p>
+                        <p class="text-slate-500 text-sm px-4">Technical SEO veteran who has survived every major Google
+                            update since 2012.</p>
+                    </div>
+                    <!-- Team 3 -->
+                    <div class="text-center group">
+                        <div
+                            class="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 bg-slate-200 border-4 border-white shadow-lg">
+                            <div
+                                class="absolute inset-0 bg-slate-800 flex items-center justify-center text-white text-xs">
+                                Image Placeholder</div>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">Elena Rodriguez</h4>
+                        <p class="text-indigo-600 font-medium text-sm mb-3">Creative Director</p>
+                        <p class="text-slate-500 text-sm px-4">Award-winning designer obsessed with conversion-focused
+                            UX and brand storytelling.</p>
+                    </div>
+                    <!-- Team 4 -->
+                    <div class="text-center group">
+                        <div
+                            class="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 bg-slate-200 border-4 border-white shadow-lg">
+                            <div
+                                class="absolute inset-0 bg-slate-800 flex items-center justify-center text-white text-xs">
+                                Image Placeholder</div>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">David Kim</h4>
+                        <p class="text-pink-500 font-medium text-sm mb-3">Head of Paid Media</p>
+                        <p class="text-slate-500 text-sm px-4">Manages over $10M in annual ad spend across Meta, Google,
+                            and LinkedIn.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (Identical to index.html snippet) -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <div
+                            class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                            N</div>
+                        <span class="text-xl font-bold tracking-tight text-white">Nexus<span
+                                class="text-indigo-500">.</span></span>
+                    </a>
+                    <p class="text-sm text-slate-400 mb-6 w-5/6">A full-service digital marketing agency dedicated to
+                        growing ambitious brands through data and creativity.</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-indigo-600 text-white transition-colors"><svg
+                                class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                            </svg></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-indigo-600 text-white transition-colors"><svg
+                                class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-indigo-600 text-white transition-colors"><svg
+                                class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-indigo-400 text-indigo-400">About Us</a></li>
+                        <li><a href="case-studies.html" class="hover:text-indigo-400 transition-colors">Case Studies</a>
+                        </li>
+                        <li><a href="pricing.html" class="hover:text-indigo-400 transition-colors">Pricing Plans</a>
+                        </li>
+                        <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html" class="hover:text-indigo-400 transition-colors">SEO Optimization</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-indigo-400 transition-colors">PPC Marketing</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Content Strategy</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Social Media</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Portal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="login.html" class="hover:text-indigo-400 transition-colors">Client Log In</a></li>
+                        <li><a href="signup.html" class="hover:text-indigo-400 transition-colors">Create Account</a>
+                        </li>
+                        <li><a href="user-dashboard.html" class="hover:text-indigo-400 transition-colors">User
+                                Dashboard</a></li>
+                        <li><a href="admin-dashboard.html" class="hover:text-indigo-400 transition-colors">Admin
+                                Area</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; 2026 Nexus Tech Agency. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/rtl-toggle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard | Nexus Digital Marketing</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#4f46e5', secondary: '#ec4899', dark: '#0f172a', light: '#f8fafc' }, fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex">
+    <!-- SIDEBAR -->
+    <aside class="hidden lg:flex flex-col w-64 h-screen fixed left-0 top-0 bg-white border-r border-slate-200 z-50">
+        <div class="h-16 flex items-center px-6 border-b border-slate-200">
+            <a href="index.html" class="flex items-center gap-2">
+                <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-600 to-pink-500 flex items-center justify-center text-white font-bold shadow-sm">
+                    N</div>
+                <span class="text-lg font-bold tracking-tight text-slate-900">Nexus<span
+                        class="text-indigo-600">.</span> Portal</span>
+            </a>
+        </div>
+
+        <div class="flex-grow overflow-y-auto py-6 px-4">
+            <nav class="space-y-1">
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2.5 bg-indigo-50 text-indigo-600 rounded-lg font-medium">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                        </path>
+                    </svg>
+                    Overview
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-lg font-medium transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                        </path>
+                    </svg>
+                    Analytics & Reports
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-lg font-medium transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                        </path>
+                    </svg>
+                    Campaign Status
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-lg font-medium transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
+                        </path>
+                    </svg>
+                    Billing
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-lg font-medium transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    Settings
+                </a>
+            </nav>
+        </div>
+        <div class="p-4 border-t border-slate-200">
+            <div
+                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors cursor-pointer">
+                <div
+                    class="w-8 h-8 rounded-full bg-slate-300 flex items-center justify-center text-sm font-bold text-slate-700">
+                    JD</div>
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-medium text-slate-900 truncate">John Doe</p>
+                    <p class="text-xs text-slate-500 truncate">Acme Corp</p>
+                </div>
+                <a href="login.html" class="text-slate-400 hover:text-red-500"><svg class="w-5 h-5" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
+                        </path>
+                    </svg></a>
+            </div>
+        </div>
+    </aside>
+    <!-- MAIN CONTENT -->
+    <div class="lg:pl-64 flex-1 flex flex-col h-screen overflow-hidden">
+
+        <!-- Mobile Header -->
+        <header class="lg:hidden h-16 bg-white border-b border-slate-200 flex items-center justify-between px-4 z-40">
+            <a href="index.html" class="flex items-center gap-2">
+                <div
+                    class="w-6 h-6 rounded bg-gradient-to-br from-indigo-600 to-pink-500 flex items-center justify-center text-white font-bold text-xs">
+                    N</div>
+                <span class="font-bold text-slate-900">Portal</span>
+            </a>
+            <button class="text-slate-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg></button>
+        </header>
+        <!-- Topbar -->
+        <header
+            class="hidden lg:flex h-16 bg-white border-b border-slate-200 items-center justify-between px-8 z-40 sticky top-0">
+            <h2 class="text-xl font-bold text-slate-800">Overview</h2>
+            <div class="flex items-center gap-4">
+                <button class="text-slate-400 hover:text-indigo-600 relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                        </path>
+                    </svg>
+                    <span class="absolute top-0 right-0 w-2 h-2 bg-pink-500 rounded-full"></span>
+                </button>
+                <a href="contact.html"
+                    class="px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors">Support</a>
+            </div>
+        </header>
+        <!-- Page Content -->
+        <main class="flex-1 overflow-y-auto p-4 md:p-8 bg-slate-50">
+
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Current Billing Cycle
+                    </h3>
+                    <div class="text-2xl font-bold text-slate-900">September 2026</div>
+                </div>
+                <div
+                    class="text-sm font-medium text-slate-600 bg-white px-3 py-1.5 rounded-md border border-slate-200 shadow-sm">
+                    Plan: <span class="text-indigo-600 font-bold">Professional</span>
+                </div>
+            </div>
+            <!-- Metric Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span
+                            class="inline-flex items-center text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded-full">+12.5%</span>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-black text-slate-900 mb-1">45.2K</div>
+                        <div class="text-sm text-slate-500 font-medium">Organic Traffic</div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-pink-50 flex items-center justify-center text-pink-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4v16m8-8H4"></path>
+                            </svg>
+                        </div>
+                        <span
+                            class="inline-flex items-center text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded-full">+8.2%</span>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-black text-slate-900 mb-1">324</div>
+                        <div class="text-sm text-slate-500 font-medium">Total Leads Generated</div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-start mb-4">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span
+                            class="inline-flex items-center text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded-full">+18.0%</span>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-black text-slate-900 mb-1">$4,850</div>
+                        <div class="text-sm text-slate-500 font-medium">Ad Spend (MTD)</div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center text-orange-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                                </path>
+                            </svg>
+                        </div>
+                        <span
+                            class="inline-flex items-center text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded-full">-2.4%</span>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-black text-slate-900 mb-1">$45.20</div>
+                        <div class="text-sm text-slate-500 font-medium">Cost Per Lead (CPL)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8 mb-8">
+                <!-- Main Chart Area (Placeholder) -->
+                <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-slate-800">Traffic Source Trend</h3>
+                        <select
+                            class="bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-1.5 focus:outline-none">
+                            <option>Last 30 Days</option>
+                            <option>This Quarter</option>
+                        </select>
+                    </div>
+                    <div
+                        class="h-64 bg-slate-50 border border-slate-100 border-dashed rounded-xl flex items-center justify-center relative">
+                        <!-- Abstract Chart Representation -->
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[80%] bg-gradient-to-t from-indigo-100/50 to-transparent clip-path-chart opacity-50">
+                        </div>
+                        <div class="text-slate-400 font-medium">[ Interactive Chart Area ]</div>
+                    </div>
+                </div>
+                <!-- Active Campaigns -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <h3 class="font-bold text-slate-800 mb-6">Active Campaigns</h3>
+                    <div class="space-y-4">
+                        <div class="border-b border-slate-100 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold text-sm text-slate-800">Google Search - Brand</span>
+                                <span
+                                    class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded">Active</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-2 mb-1">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-slate-500">
+                                <span>Spend: $1,250</span>
+                                <span>Budget: $2,000</span>
+                            </div>
+                        </div>
+                        <div class="border-b border-slate-100 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold text-sm text-slate-800">Meta Retargeting</span>
+                                <span
+                                    class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded">Active</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-2 mb-1">
+                                <div class="bg-pink-500 h-2 rounded-full" style="width: 45%"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-slate-500">
+                                <span>Spend: $850</span>
+                                <span>Budget: $1,500</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold text-sm text-slate-800">LinkedIn ABM</span>
+                                <span
+                                    class="text-xs font-bold text-orange-600 bg-orange-50 px-2 py-1 rounded">Paused</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-2 mb-1">
+                                <div class="bg-slate-400 h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-slate-500">
+                                <span>Spend: $1,000</span>
+                                <span>Budget: $1,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Recent Reports Table -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 overflow-hidden">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="font-bold text-slate-800">Latest Reports</h3>
+                    <button class="text-sm font-medium text-indigo-600 hover:text-indigo-800">View All</button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-200">
+                                <th class="p-4 font-semibold text-slate-600 text-sm">Report Name</th>
+                                <th class="p-4 font-semibold text-slate-600 text-sm">Date Generated</th>
+                                <th class="p-4 font-semibold text-slate-600 text-sm">Type</th>
+                                <th class="p-4 font-semibold text-slate-600 text-sm text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-4 font-medium text-slate-900 flex items-center gap-3">
+                                    <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 15.889h-2v-1.111h2v1.111zm0-2.222h-2v-2.222h2v2.222zm0-3.333h-2v-4.445h2v4.445zm3 5.556h-2v-1.111h2v1.111zm0-2.222h-2v-2.222h2v2.222zm0-3.333h-2v-4.445h2v4.445z" />
+                                    </svg>
+                                    August Performance Summary.pdf
+                                </td>
+                                <td class="p-4 text-slate-500">Sept 01, 2026</td>
+                                <td class="p-4"><span
+                                        class="px-2 py-1 bg-slate-100 rounded text-xs text-slate-600 font-medium">Monthly
+                                        Wrap</span></td>
+                                <td class="p-4 text-right">
+                                    <button class="text-indigo-600 hover:text-indigo-800 font-medium">Download</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-4 font-medium text-slate-900 flex items-center gap-3">
+                                    <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 15.889h-2v-1.111h2v1.111zm0-2.222h-2v-2.222h2v2.222zm0-3.333h-2v-4.445h2v4.445zm3 5.556h-2v-1.111h2v1.111zm0-2.222h-2v-2.222h2v2.222zm0-3.333h-2v-4.445h2v4.445z" />
+                                    </svg>
+                                    Technical SEO Audit 2.pdf
+                                </td>
+                                <td class="p-4 text-slate-500">Aug 15, 2026</td>
+                                <td class="p-4"><span
+                                        class="px-2 py-1 bg-slate-100 rounded text-xs text-slate-600 font-medium">Audit</span>
+                                </td>
+                                <td class="p-4 text-right">
+                                    <button class="text-indigo-600 hover:text-indigo-800 font-medium">Download</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Simple Footer inside main content -->
+            <div class="mt-8 text-center text-xs text-slate-400">
+                &copy; 2026 Nexus Agency Portal.
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

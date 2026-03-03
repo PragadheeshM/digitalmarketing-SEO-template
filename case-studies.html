@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | Nexus Digital Marketing</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#4f46e5', secondary: '#ec4899', dark: '#0f172a', light: '#f8fafc' }, fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header id="navbar"
+        class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-pink-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        N</div>
+                    <span class="text-xl font-bold tracking-tight text-slate-900">Nexus<span
+                            class="text-indigo-600">.</span></span>
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <div class="nav-dropdown">
+                        <button
+                            class="nav-dropdown-btn flex items-center gap-1 text-slate-600 hover:text-indigo-600 font-medium transition-colors">Home
+                            <svg class="chevron w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></button>
+                        <div class="nav-dropdown-menu">
+                            <a href="index.html"><span class="dd-icon"><svg width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                        <polyline points="9 22 9 12 15 12 15 22" />
+                                    </svg></span>Home 1</a>
+                            <a href="index2.html"><span class="dd-icon"><svg width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="7" height="7" />
+                                        <rect x="14" y="3" width="7" height="7" />
+                                        <rect x="14" y="14" width="7" height="7" />
+                                        <rect x="3" y="14" width="7" height="7" />
+                                    </svg></span>Home 2</a>
+                        </div>
+                    </div>
+                    <a href="about.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">About</a>
+                    <a href="services.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Services</a>
+                    <a href="case-studies.html" class="text-indigo-600 font-medium transition-colors">Case Studies</a>
+                    <a href="pricing.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Pricing</a>
+                    <a href="contact.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Contact</a>
+                    <div class="nav-dropdown">
+                        <button
+                            class="nav-dropdown-btn flex items-center gap-1 text-slate-600 hover:text-indigo-600 font-medium transition-colors">Dashboard
+                            <svg class="chevron w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></button>
+                        <div class="nav-dropdown-menu">
+                            <a href="user-dashboard.html"><span class="dd-icon"><svg width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
+                                    </svg></span>User Dashboard</a>
+                            <a href="admin-dashboard.html"><span class="dd-icon"><svg width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                        <path d="M2 17l10 5 10-5" />
+                                        <path d="M2 12l10 5 10-5" />
+                                    </svg></span>Admin Dashboard</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="hidden lg:flex items-center gap-4">
+                    <button id="rtl-toggle"
+                        class="text-slate-500 hover:text-indigo-600 font-medium w-16 text-center transition-colors"></button>
+                    <a href="login.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors px-4 py-2">Login</a>
+                    <a href="signup.html"
+                        class="bg-slate-900 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-indigo-600 transition-colors shadow-lg btn-hover">Get
+                        Started</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-slate-600 focus:outline-none"><svg class="h-6 w-6"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg></button>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="hidden lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100">
+            <div class="flex flex-col p-4 space-y-2">
+                <div>
+                    <button
+                        class="mobile-dd-btn w-full flex items-center justify-between text-slate-600 font-medium px-4 py-2 hover:bg-slate-50 rounded-lg">Home
+                        <svg class="chevron w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg></button>
+                    <div class="mobile-dd-content mt-1 space-y-1">
+                        <a href="index.html"
+                            class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">🏠 Home
+                            1</a>
+                        <a href="index2.html"
+                            class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">⊞ Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html"
+                    class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">About</a>
+                <a href="services.html"
+                    class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">Services</a>
+                <a href="case-studies.html"
+                    class="text-indigo-600 font-medium block px-4 py-2 bg-indigo-50 rounded-lg">Case Studies</a>
+                <a href="pricing.html"
+                    class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">Pricing</a>
+                <a href="contact.html"
+                    class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">Contact</a>
+                <div>
+                    <button
+                        class="mobile-dd-btn w-full flex items-center justify-between text-slate-600 font-medium px-4 py-2 hover:bg-slate-50 rounded-lg">Dashboard
+                        <svg class="chevron w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg></button>
+                    <div class="mobile-dd-content mt-1 space-y-1">
+                        <a href="user-dashboard.html"
+                            class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">👤 User
+                            Dashboard</a>
+                        <a href="admin-dashboard.html"
+                            class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">🛡️ Admin
+                            Dashboard</a>
+                    </div>
+                </div>
+                <div class="border-t border-slate-100 pt-4 flex flex-col gap-3">
+                    <a href="login.html"
+                        class="text-slate-600 font-medium block px-4 py-2 text-center border border-slate-200 rounded-lg">Login</a>
+                    <a href="signup.html"
+                        class="bg-indigo-600 text-white font-medium block px-4 py-2 text-center rounded-lg">Get
+                        Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-24">
+        <!-- PAGE HEADER -->
+        <section class="bg-slate-900 text-white py-20 relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-20">
+                <div
+                    class="absolute top-10 left-10 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl">
+                </div>
+                <div
+                    class="absolute bottom-10 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl">
+                </div>
+            </div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Our Work</h1>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto">Explore how we've helped brands across industries
+                    achieve exponential growth.</p>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO GRID -->
+        <section class="py-24 bg-slate-50">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+
+                <!-- Filters (Visual only for static template) -->
+                <div class="flex flex-wrap justify-center gap-4 mb-16">
+                    <button class="px-6 py-2 bg-indigo-600 text-white rounded-full font-medium shadow-md">All
+                        Projects</button>
+                    <button
+                        class="px-6 py-2 bg-white text-slate-600 rounded-full font-medium hover:bg-slate-100 border border-slate-200 transition-colors">SEO</button>
+                    <button
+                        class="px-6 py-2 bg-white text-slate-600 rounded-full font-medium hover:bg-slate-100 border border-slate-200 transition-colors">PPC
+                        Ads</button>
+                    <button
+                        class="px-6 py-2 bg-white text-slate-600 rounded-full font-medium hover:bg-slate-100 border border-slate-200 transition-colors">Content</button>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Case Study 1 -->
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer border border-slate-100 flex flex-col h-full">
+                        <div class="h-56 bg-slate-200 relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-indigo-500 to-purple-500 opacity-90 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-white/50 text-4xl font-black">
+                                E-COMMERCE</div>
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900 border border-white/20">
+                                SEO & PPC</div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h4
+                                class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                                TechGear Electronics</h4>
+                            <p class="text-slate-600 mb-6 leading-relaxed flex-grow">A complete multi-channel overhaul
+                                that integrated Technical SEO with aggressive retargeting campaigns to capture abandoned
+                                carts.</p>
+
+                            <div class="grid grid-cols-2 gap-4 border-t border-slate-100 pt-6">
+                                <div>
+                                    <div class="text-sm text-slate-500 mb-1">Organic Rev</div>
+                                    <div class="text-xl font-bold text-indigo-600">+240%</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-slate-500 mb-1">ROAS</div>
+                                    <div class="text-xl font-bold text-pink-500">4.5x</div>
+                                </div>
+                            </div>
+                            <a href="#"
+                                class="mt-6 text-indigo-600 font-semibold inline-flex items-center group-hover:text-pink-500 transition-colors">
+                                Read Full Case Study <svg
+                                    class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer border border-slate-100 flex flex-col h-full">
+                        <div class="h-56 bg-slate-200 relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-blue-500 to-teal-500 opacity-90 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-white/50 text-4xl font-black">
+                                SaaS</div>
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900 border border-white/20">
+                                LinkedIn Ads</div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h4
+                                class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                                CloudSync AI</h4>
+                            <p class="text-slate-600 mb-6 leading-relaxed flex-grow">Targeted account-based marketing
+                                (ABM) on LinkedIn to secure enterprise contracts for a budding B2B SaaS platform.</p>
+
+                            <div class="grid grid-cols-2 gap-4 border-t border-slate-100 pt-6">
+                                <div>
+                                    <div class="text-sm text-slate-500 mb-1">CPA Reduced</div>
+                                    <div class="text-xl font-bold text-indigo-600">-55%</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-slate-500 mb-1">Demo Requests</div>
+                                    <div class="text-xl font-bold text-pink-500">+180%</div>
+                                </div>
+                            </div>
+                            <a href="#"
+                                class="mt-6 text-indigo-600 font-semibold inline-flex items-center group-hover:text-pink-500 transition-colors">
+                                Read Full Case Study <svg
+                                    class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 3 -->
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer border border-slate-100 flex flex-col h-full">
+                        <div class="h-56 bg-slate-200 relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-orange-400 to-pink-500 opacity-90 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-white/50 text-4xl font-black">
+                                LOCAL</div>
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900 border border-white/20">
+                                Local SEO</div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h4
+                                class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                                SmileGen Dental</h4>
+                            <p class="text-slate-600 mb-6 leading-relaxed flex-grow">Dominating the local map pack and
+                                restructuring landing pages to convert high-value cosmetic dentistry leads.</p>
+
+                            <div class="grid grid-cols-2 gap-4 border-t border-slate-100 pt-6">
+                                <div>
+                                    <div class="text-sm text-slate-500 mb-1">New Patients</div>
+                                    <div class="text-xl font-bold text-indigo-600">300+/mo</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-slate-500 mb-1">Local Rank</div>
+                                    <div class="text-xl font-bold text-pink-500">#1</div>
+                                </div>
+                            </div>
+                            <a href="#"
+                                class="mt-6 text-indigo-600 font-semibold inline-flex items-center group-hover:text-pink-500 transition-colors">
+                                Read Full Case Study <svg
+                                    class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 4 -->
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer border border-slate-100 flex flex-col h-full">
+                        <div class="h-56 bg-slate-200 relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-slate-800 opacity-90 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-white/50 text-4xl font-black">
+                                FINTECH</div>
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900 border border-white/20">
+                                Content</div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h4
+                                class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                                PayFlow App</h4>
+                            <p class="text-slate-600 mb-6 leading-relaxed flex-grow">Producing cluster-based content
+                                architecture that captured highly competitive top-of-funnel financial keywords.</p>
+
+                            <div class="grid grid-cols-2 gap-4 border-t border-slate-100 pt-6">
+                                <div>
+                                    <div class="text-sm text-slate-500 mb-1">Traffic</div>
+                                    <div class="text-xl font-bold text-indigo-600">500k/mo</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-slate-500 mb-1">App Installs</div>
+                                    <div class="text-xl font-bold text-pink-500">+120%</div>
+                                </div>
+                            </div>
+                            <a href="#"
+                                class="mt-6 text-indigo-600 font-semibold inline-flex items-center group-hover:text-pink-500 transition-colors">
+                                Read Full Case Study <svg
+                                    class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <a href="contact.html"
+                        class="inline-flex items-center justify-center px-8 py-4 bg-indigo-600 text-white rounded-xl font-bold shadow-lg shadow-indigo-500/30 hover:bg-slate-900 transition-all btn-hover text-lg cursor-pointer">
+                        Be Our Next Success Story
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER Snippet -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-4 text-center">
+            <a href="index.html" class="inline-flex items-center gap-2 mb-6">
+                <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                    N</div>
+                <span class="text-xl font-bold tracking-tight text-white">Nexus<span
+                        class="text-indigo-500">.</span></span>
+            </a>
+            <p>&copy; 2026 Nexus Tech Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/rtl-toggle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans | Nexus Digital Marketing</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#4f46e5', secondary: '#ec4899', dark: '#0f172a', light: '#f8fafc' }, fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header id="navbar"
+        class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-pink-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        N</div>
+                    <span class="text-xl font-bold tracking-tight text-slate-900">Nexus<span
+                            class="text-indigo-600">.</span></span>
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <div class="nav-dropdown">
+                        <button
+                            class="nav-dropdown-btn flex items-center gap-1 text-slate-600 hover:text-indigo-600 font-medium transition-colors">Home
+                            <svg class="chevron w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></button>
+                        <div class="nav-dropdown-menu">
+                            <a href="index.html"><span class="dd-icon"><svg width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                        <polyline points="9 22 9 12 15 12 15 22" />
+                                    </svg></span>Home 1</a>
+                            <a href="index2.html"><span class="dd-icon"><svg width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="7" height="7" />
+                                        <rect x="14" y="3" width="7" height="7" />
+                                        <rect x="14" y="14" width="7" height="7" />
+                                        <rect x="3" y="14" width="7" height="7" />
+                                    </svg></span>Home 2</a>
+                        </div>
+                    </div>
+                    <a href="about.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">About</a>
+                    <a href="services.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Services</a>
+                    <a href="case-studies.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Case Studies</a>
+                    <a href="pricing.html" class="text-indigo-600 font-medium transition-colors">Pricing</a>
+                    <a href="contact.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Contact</a>
+                    <div class="nav-dropdown">
+                        <button
+                            class="nav-dropdown-btn flex items-center gap-1 text-slate-600 hover:text-indigo-600 font-medium transition-colors">Dashboard
+                            <svg class="chevron w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></button>
+                        <div class="nav-dropdown-menu">
+                            <a href="user-dashboard.html"><span class="dd-icon"><svg width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
+                                    </svg></span>User Dashboard</a>
+                            <a href="admin-dashboard.html"><span class="dd-icon"><svg width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                        <path d="M2 17l10 5 10-5" />
+                                        <path d="M2 12l10 5 10-5" />
+                                    </svg></span>Admin Dashboard</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="hidden lg:flex items-center gap-4">
+                    <button id="rtl-toggle"
+                        class="text-slate-500 hover:text-indigo-600 font-medium w-16 text-center transition-colors"></button>
+                    <a href="login.html"
+                        class="text-slate-600 hover:text-indigo-600 font-medium transition-colors px-4 py-2">Login</a>
+                    <a href="signup.html"
+                        class="bg-slate-900 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-indigo-600 transition-colors shadow-lg btn-hover">Get
+                        Started</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-slate-600 focus:outline-none"><svg class="h-6 w-6"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg></button>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="hidden lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100">
+            <div class="flex flex-col p-4 space-y-2">
+                <div>
+                    <button
+                        class="mobile-dd-btn w-full flex items-center justify-between text-slate-600 font-medium px-4 py-2 hover:bg-slate-50 rounded-lg">Home
+                        <svg class="chevron w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg></button>
+                    <div class="mobile-dd-content mt-1 space-y-1">
+                        <a href="index.html"
+                            class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">🏠 Home
+                            1</a>
+                        <a href="index2.html"
+                            class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">⊞ Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html"
+                    class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">About</a>
+                <a href="services.html"
+                    class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">Services</a>
+                <a href="case-studies.html"
+                    class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">Case Studies</a>
+                <a href="pricing.html"
+                    class="text-indigo-600 font-medium block px-4 py-2 bg-indigo-50 rounded-lg">Pricing</a>
+                <a href="contact.html"
+                    class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">Contact</a>
+                <div>
+                    <button
+                        class="mobile-dd-btn w-full flex items-center justify-between text-slate-600 font-medium px-4 py-2 hover:bg-slate-50 rounded-lg">Dashboard
+                        <svg class="chevron w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg></button>
+                    <div class="mobile-dd-content mt-1 space-y-1">
+                        <a href="user-dashboard.html"
+                            class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">👤 User
+                            Dashboard</a>
+                        <a href="admin-dashboard.html"
+                            class="text-slate-600 font-medium block px-4 py-2 hover:bg-slate-50 rounded-lg">🛡️ Admin
+                            Dashboard</a>
+                    </div>
+                </div>
+                <div class="border-t border-slate-100 pt-4 flex flex-col gap-3">
+                    <a href="login.html"
+                        class="text-slate-600 font-medium block px-4 py-2 text-center border border-slate-200 rounded-lg">Login</a>
+                    <a href="signup.html"
+                        class="bg-indigo-600 text-white font-medium block px-4 py-2 text-center rounded-lg">Get
+                        Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-24">
+        <!-- PAGE HEADER -->
+        <section class="bg-slate-900 text-white py-20 relative overflow-hidden">
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Transparent Pricing.</h1>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto">Investment levels designed to generate an aggressive
+                    return on ad spend.</p>
+            </div>
+        </section>
+
+        <!-- PRICING CARDS -->
+        <section class="py-24 bg-slate-50">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+
+                <!-- Billing Toggle (Visual) -->
+                <div class="flex justify-center mb-16">
+                    <div class="bg-slate-200 p-1 rounded-xl flex items-center">
+                        <button
+                            class="px-6 py-2 bg-white text-slate-900 rounded-lg font-bold shadow-sm">Monthly</button>
+                        <button
+                            class="px-6 py-2 text-slate-600 font-medium hover:text-slate-900 transition-colors">Quarterly
+                            (Save 15%)</button>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+
+                    <!-- Starter Plan -->
+                    <div
+                        class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-indigo-200 transition-all flex flex-col h-[calc(100%-2rem)]">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Starter Growth</h3>
+                        <p class="text-slate-500 text-sm mb-6 h-10">Perfect for small businesses looking to establish a
+                            footprint.</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-extrabold text-slate-900">$1,500</span>
+                            <span class="text-slate-500 font-medium">/mo</span>
+                        </div>
+                        <a href="contact.html?plan=starter"
+                            class="block w-full py-3 px-4 bg-slate-100 text-slate-800 font-bold rounded-xl text-center hover:bg-slate-200 transition-colors mb-8">Get
+                            Started</a>
+
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="font-semibold text-slate-900 text-sm">What's included:</div>
+                            <ul class="space-y-3 text-sm text-slate-600">
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-indigo-500 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Basic SEO Audit</li>
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-indigo-500 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> 2 Blog Posts / month</li>
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-indigo-500 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Google Ads Setup (Up to $3k spend)</li>
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-indigo-500 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Monthly Performance Report</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Professional Plan (Highlighted) -->
+                    <div
+                        class="bg-indigo-600 p-8 rounded-3xl shadow-2xl border border-indigo-500 transform md:-translate-y-4 flex flex-col h-full relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4">
+                            <span
+                                class="bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Most
+                                Popular</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Professional</h3>
+                        <p class="text-indigo-100 text-sm mb-6 h-10">Aggressive scaling for established brands ready to
+                            dominate.</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-extrabold text-white">$4,000</span>
+                            <span class="text-indigo-200 font-medium">/mo</span>
+                        </div>
+                        <a href="contact.html?plan=pro"
+                            class="block w-full py-4 px-4 bg-white text-indigo-600 font-bold rounded-xl text-center shadow-lg hover:bg-slate-50 transition-colors mb-8 shadow-indigo-900/50 btn-hover">Scale
+                            My Business</a>
+
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="font-semibold text-white text-sm">Everything in Starter, plus:</div>
+                            <ul class="space-y-3 text-sm text-indigo-50">
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-pink-400 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Advanced Technical SEO</li>
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-pink-400 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> 5 SEO Premium Articles / month</li>
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-pink-400 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Multi-channel PPC (Meta, GAds)</li>
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-pink-400 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Live Analytics Dashboard</li>
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-pink-400 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Bi-weekly Strategy Calls</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div
+                        class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-indigo-200 transition-all flex flex-col h-[calc(100%-2rem)]">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Enterprise Custom</h3>
+                        <p class="text-slate-500 text-sm mb-6 h-10">Bespoke omnichannel strategies for large market
+                            leaders.</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-extrabold text-slate-900">Custom</span>
+                            <span class="text-slate-500 font-medium">Pricing</span>
+                        </div>
+                        <a href="contact.html?plan=enterprise"
+                            class="block w-full py-3 px-4 bg-slate-900 text-white font-bold rounded-xl text-center hover:bg-slate-800 transition-colors mb-8">Contact
+                            Sales</a>
+
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="font-semibold text-slate-900 text-sm">Fully customized solutions:</div>
+                            <ul class="space-y-3 text-sm text-slate-600">
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-indigo-500 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Dedicated Account Team</li>
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-indigo-500 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> International / Multilingual SEO</li>
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-indigo-500 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Unlimited Ad Spend Management</li>
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-indigo-500 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Programmatic Advertising</li>
+                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-indigo-500 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Custom Tech Stack Integration</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURE COMPARISON (Optional for full feature set) -->
+        <section class="py-24 bg-white hidden lg:block">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <h2 class="text-3xl font-bold text-center mb-16">Compare Feature Sets</h2>
+                <div class="overflow-x-auto rounded-xl border border-slate-200">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-50 border-b border-slate-200">
+                                <th class="p-6 font-bold text-slate-900 w-1/4">Features</th>
+                                <th class="p-6 font-bold text-slate-900 text-center w-1/4 border-l border-slate-200">
+                                    Starter</th>
+                                <th
+                                    class="p-6 font-bold text-indigo-600 text-center w-1/4 border-l border-slate-200 bg-indigo-50/50">
+                                    Professional</th>
+                                <th class="p-6 font-bold text-slate-900 text-center w-1/4 border-l border-slate-200">
+                                    Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr class="border-b border-slate-100">
+                                <td class="p-4 text-slate-600 font-medium">Technical SEO Audit</td>
+                                <td class="p-4 text-center border-l border-slate-200 text-slate-500">Monthly basic</td>
+                                <td class="p-4 text-center border-l border-slate-200 bg-indigo-50/20 font-semibold">
+                                    Weekly comprehensive</td>
+                                <td class="p-4 text-center border-l border-slate-200 text-slate-900 font-semibold">Daily
+                                    automated</td>
+                            </tr>
+                            <tr class="border-b border-slate-100">
+                                <td class="p-4 text-slate-600 font-medium">Content Marketing</td>
+                                <td class="p-4 text-center border-l border-slate-200 text-slate-500">2 Articles</td>
+                                <td class="p-4 text-center border-l border-slate-200 bg-indigo-50/20 font-semibold">5
+                                    Premium Articles</td>
+                                <td class="p-4 text-center border-l border-slate-200 text-slate-900 font-semibold">
+                                    Custom Volume</td>
+                            </tr>
+                            <tr class="border-b border-slate-100">
+                                <td class="p-4 text-slate-600 font-medium">Custom Dashboard</td>
+                                <td class="p-4 text-center border-l border-slate-200 text-slate-400">—</td>
+                                <td class="p-4 text-center border-l border-slate-200 bg-indigo-50/20 text-indigo-600">
+                                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </td>
+                                <td class="p-4 text-center border-l border-slate-200 text-indigo-600"><svg
+                                        class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER Snippet -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-4 text-center">
+            <a href="index.html" class="inline-flex items-center gap-2 mb-6">
+                <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                    N</div>
+                <span class="text-xl font-bold tracking-tight text-white">Nexus<span
+                        class="text-indigo-500">.</span></span>
+            </a>
+            <p>&copy; 2026 Nexus Tech Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/rtl-toggle.js"></script>
+</body>
+
+</html>
