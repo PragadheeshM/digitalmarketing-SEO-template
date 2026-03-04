@@ -2,31 +2,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const rtlToggleBtn = document.getElementById('rtl-toggle');
     const htmlElement = document.documentElement;
 
-    // Check local storage for saved direction
-    const savedDir = localStorage.getItem('dir') || 'ltr';
+    // Restore saved direction from localStorage
+    const savedDir = localStorage.getItem('nexus-dir') || 'ltr';
     htmlElement.setAttribute('dir', savedDir);
+
+    const globeSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+    </svg>`;
+
+    function updateBtnContent(dir) {
+        if (!rtlToggleBtn) return;
+        const nextLabel = dir === 'rtl' ? 'LTR' : 'RTL';
+        rtlToggleBtn.title = `Switch to ${nextLabel}`;
+        rtlToggleBtn.innerHTML = globeSVG;
+    }
+
+    // Set initial icon state
+    updateBtnContent(savedDir);
 
     if (rtlToggleBtn) {
         rtlToggleBtn.addEventListener('click', () => {
-            const currentDir = htmlElement.getAttribute('dir');
+            const currentDir = htmlElement.getAttribute('dir') || 'ltr';
             const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
-
             htmlElement.setAttribute('dir', newDir);
-            localStorage.setItem('dir', newDir);
-
-            // Update button icon/text
-            updateBtnContent(rtlToggleBtn, newDir);
+            localStorage.setItem('nexus-dir', newDir);
+            updateBtnContent(newDir);
         });
-
-        // Initial button text
-        updateBtnContent(rtlToggleBtn, savedDir);
-    }
-
-    function updateBtnContent(btn, dir) {
-        if (dir === 'rtl') {
-            btn.innerHTML = `<span class="flex items-center gap-1 text-sm font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12H3"></path><path d="m14 5 7 7-7 7"></path></svg> EN</span>`;
-        } else {
-            btn.innerHTML = `<span class="flex items-center gap-1 text-sm font-medium">AR <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"></path><path d="m10 19-7-7 7-7"></path></svg></span>`;
-        }
     }
 });

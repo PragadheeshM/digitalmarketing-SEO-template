@@ -122,7 +122,7 @@
                 <!-- Actions -->
                 <div class="hidden lg:flex items-center gap-4">
                     <button id="rtl-toggle"
-                        class="text-white/70 hover:text-white font-medium w-16 text-center transition-colors text-sm"></button>
+                        class="text-white/70 hover:text-white flex flex-col items-center justify-center w-10 transition-colors rounded-lg hover:bg-white/10 p-1"></button>
                     <a href="login.html"
                         class="nav-link-white text-white/90 hover:text-white font-medium transition-colors px-3 py-2">Login</a>
                     <a href="signup.html" class="btn-primary text-sm py-2.5 px-5">Get Started</a>
@@ -467,80 +467,110 @@
             </div>
         </section>
 
-        <!-- ABOUT PREVIEW SECTION -->
-        <section class="py-24 bg-white overflow-hidden">
+        <!-- ===== ABOUT PARTNERSHIP SECTION ===== -->
+        <section class="py-28 bg-white overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-50 transform skew-x-12 origin-top-right -z-10">
+            </div>
+
             <div class="container mx-auto px-4 md:px-6 lg:px-8">
                 <div class="flex flex-col lg:flex-row items-center gap-16">
-                    <div class="lg:w-1/2 relative">
-                        <!-- Abstract Image Placeholder -->
+                    <!-- Left: Abstract App UI / Data Graphic -->
+                    <div class="lg:w-1/2 relative reveal-left">
                         <div
-                            class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200">
-                            <div class="absolute inset-0 bg-indigo-600 mix-blend-overlay opacity-20"></div>
-                            <!-- Mock UI Elements overlay -->
-                            <div
-                                class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-xl flex items-center justify-between">
-                                <div>
-                                    <div class="text-sm text-slate-500 font-medium mb-1">Monthly Traffic</div>
-                                    <div class="text-2xl font-bold text-slate-900">+145.8%</div>
+                            class="relative rounded-[2rem] overflow-hidden aspect-square bg-gradient-to-br from-indigo-50 to-pink-50 border border-slate-100 p-8 flex items-center justify-center">
+                            <!-- Abstract Graphic -->
+                            <div class="relative w-full h-full max-w-sm">
+                                <div class="absolute inset-0 bg-white rounded-2xl shadow-2xl p-6 transform -rotate-6 animate-float"
+                                    style="animation-duration: 8s;">
+                                    <div class="h-4 w-1/3 bg-slate-100 rounded mb-6"></div>
+                                    <div class="flex gap-4 items-end h-32 border-b border-slate-100 pb-2 mb-4">
+                                        <div class="w-1/4 bg-indigo-100 rounded-t-lg h-[40%]"></div>
+                                        <div class="w-1/4 bg-indigo-200 rounded-t-lg h-[60%]"></div>
+                                        <div class="w-1/4 bg-indigo-400 rounded-t-lg h-[80%]"></div>
+                                        <div
+                                            class="w-1/4 bg-indigo-600 rounded-t-lg h-[100%] shadow-lg shadow-indigo-500/30">
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-2 mb-2">
+                                        <div class="h-2 w-full bg-emerald-100 rounded"></div>
+                                        <div class="h-2 w-1/4 bg-emerald-400 rounded"></div>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <div class="h-2 w-full bg-pink-100 rounded"></div>
+                                        <div class="h-2 w-1/2 bg-pink-500 rounded"></div>
+                                    </div>
                                 </div>
-                                <div
-                                    class="w-16 h-16 rounded-full border-4 border-indigo-100 border-t-indigo-600 flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                                    </svg>
+
+                                <!-- Floating Data Card -->
+                                <div class="absolute -right-8 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-white flex items-center gap-4 animate-float"
+                                    style="animation-delay: -3s;">
+                                    <div
+                                        class="w-14 h-14 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center border-4 border-white shadow-sm">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-slate-500 font-semibold mb-1">MOM Growth</div>
+                                        <div class="text-3xl font-black text-slate-900">+145<span
+                                                class="text-emerald-500 text-xl">%</span></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Decorative element -->
-                        <div
-                            class="absolute -z-10 -bottom-6 -left-6 w-full h-full rounded-2xl border-2 border-indigo-100">
                         </div>
                     </div>
 
-                    <div class="lg:w-1/2">
-                        <h2 class="text-indigo-600 font-semibold tracking-wide uppercase text-sm mb-3">About Us</h2>
-                        <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Built by marketers, for ambitious
-                            brands.</h3>
-                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                            We bridge the gap between creative execution and data science. At Nexus, we believe that
-                            beautiful brands combined with aggressive marketing strategies create unstoppable market
-                            leaders.
+                    <!-- Right: Content -->
+                    <div class="lg:w-1/2 reveal-right">
+                        <div class="section-badge mb-4">🤝 Who We Are</div>
+                        <h3 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">Built by
+                            marketers, for <span class="text-gradient">visionary brands.</span></h3>
+
+                        <p class="text-lg text-slate-500 mb-6 leading-relaxed">
+                            We bridge the gap between creative execution and hardcore data science. At Nexus, we believe
+                            that beautiful brands combined with aggressive, math-backed marketing strategies create
+                            unstoppable market leaders.
                         </p>
-                        <p class="text-slate-600 mb-8 leading-relaxed">
-                            Our team of SEO specialists, performance marketers, and content strategists work cohesively
-                            as an extension of your own team. Transparency, results, and innovation are at the core of
-                            everything we do.
+                        <p class="text-lg text-slate-500 mb-10 leading-relaxed">
+                            Our team of technical SEO specialists, performance media buyers, and content strategists
+                            work cohesively as an extension of your own team. Everything we do is transparent and
+                            measurable.
                         </p>
 
-                        <div class="flex flex-col sm:flex-row gap-4 mb-10">
-                            <div class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-pink-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
+                        <div class="grid sm:grid-cols-2 gap-6 mb-12">
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
                                 <div>
-                                    <div class="font-bold text-slate-900">Data-Driven</div>
-                                    <div class="text-sm text-slate-500">Every decision backed by analytics.</div>
+                                    <div class="font-bold text-slate-900 mb-1">Data-Driven</div>
+                                    <div class="text-sm text-slate-500">Every decision backed by rigorous analytics.
+                                    </div>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-pink-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                </div>
                                 <div>
-                                    <div class="font-bold text-slate-900">Transparent</div>
-                                    <div class="text-sm text-slate-500">Full access to metrics and reports.</div>
+                                    <div class="font-bold text-slate-900 mb-1">Fully Transparent</div>
+                                    <div class="text-sm text-slate-500">Live dash access to your metrics & spend.</div>
                                 </div>
                             </div>
                         </div>
 
-                        <a href="about.html"
-                            class="inline-flex items-center px-6 py-3 bg-slate-900 text-white rounded-lg font-medium hover:bg-indigo-600 transition-colors shadow-lg btn-hover">
+                        <a href="about.html" class="btn-primary">
                             Discover Our Story
                         </a>
                     </div>
@@ -548,73 +578,89 @@
             </div>
         </section>
 
-        <!-- WORKING PROCESS -->
-        <section class="py-24 bg-slate-900 text-white">
-            <div class="container mx-auto px-4 md:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-pink-500 font-semibold tracking-wide uppercase text-sm mb-3">Our Process</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold mb-6">How we drive explosive growth.</h3>
+        <!-- ===== WORKING PROCESS ===== -->
+        <section class="py-28 section-dark text-white relative overflow-hidden">
+            <!-- bg gradients -->
+            <div
+                class="absolute top-0 right-0 w-[800px] h-[800px] bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none">
+            </div>
+
+            <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-300 text-sm font-semibold mb-6">
+                        ⚙️ Our Methodology</div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6">How we drive <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-indigo-400">explosive
+                            growth.</span></h2>
+                    <p class="text-lg text-slate-400">A systematic, repeatable framework that eliminates guesswork and
+                        scales ROI rapidly.</p>
                 </div>
 
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-                    <!-- Connecting line for desktop view -->
-                    <div class="hidden lg:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-slate-800 -z-10"></div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 relative">
+                    <!-- Connecting line -->
+                    <div
+                        class="hidden lg:block absolute top-[44px] left-[12%] right-[12%] h-[2px] bg-gradient-to-r from-indigo-500/20 via-pink-500/20 to-indigo-500/20 -z-10">
+                    </div>
 
-                    <!-- Step 1 -->
-                    <div class="text-center group">
+                    <!-- Steps -->
+                    <div class="text-center group reveal delay-100">
                         <div
-                            class="w-24 h-24 mx-auto bg-slate-800 border-4 border-slate-900 rounded-full flex items-center justify-center text-2xl font-bold text-indigo-400 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 relative z-10 shadow-xl">
+                            class="w-24 h-24 mx-auto bg-slate-900 border border-slate-700 rounded-2xl flex items-center justify-center text-3xl font-black text-indigo-400 mb-8 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500 transition-all duration-300 shadow-xl group-hover:-translate-y-2">
                             1
                         </div>
-                        <h4 class="text-xl font-bold mb-3">Research</h4>
-                        <p class="text-slate-400">Deep dive into your market, competitors, and target audience data.</p>
+                        <h4 class="text-xl font-bold mb-3">Audit & Research</h4>
+                        <p class="text-slate-400 leading-relaxed">Deep dive technical audit into your site architecture,
+                            competitors, and market gaps.</p>
                     </div>
-
-                    <!-- Step 2 -->
-                    <div class="text-center group">
+                    <div class="text-center group reveal delay-200">
                         <div
-                            class="w-24 h-24 mx-auto bg-slate-800 border-4 border-slate-900 rounded-full flex items-center justify-center text-2xl font-bold text-indigo-400 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 relative z-10 shadow-xl">
+                            class="w-24 h-24 mx-auto bg-slate-900 border border-slate-700 rounded-2xl flex items-center justify-center text-3xl font-black text-indigo-400 mb-8 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500 transition-all duration-300 shadow-xl group-hover:-translate-y-2">
                             2
                         </div>
-                        <h4 class="text-xl font-bold mb-3">Strategy</h4>
-                        <p class="text-slate-400">Develop a custom, multi-channel blueprint tailored to your KPIs.</p>
+                        <h4 class="text-xl font-bold mb-3">Strategy Design</h4>
+                        <p class="text-slate-400 leading-relaxed">We develop a custom, multi-channel blueprint built
+                            specifically around your revenue KPIs.</p>
                     </div>
-
-                    <!-- Step 3 -->
-                    <div class="text-center group">
+                    <div class="text-center group reveal delay-300">
                         <div
-                            class="w-24 h-24 mx-auto bg-slate-800 border-4 border-slate-900 rounded-full flex items-center justify-center text-2xl font-bold text-indigo-400 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 relative z-10 shadow-xl">
+                            class="w-24 h-24 mx-auto bg-slate-900 border border-slate-700 rounded-2xl flex items-center justify-center text-3xl font-black text-indigo-400 mb-8 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500 transition-all duration-300 shadow-xl group-hover:-translate-y-2">
                             3
                         </div>
-                        <h4 class="text-xl font-bold mb-3">Execution</h4>
-                        <p class="text-slate-400">Deploy campaigns, implement technical fixes, and publish content.</p>
+                        <h4 class="text-xl font-bold mb-3">Rapid Execution</h4>
+                        <p class="text-slate-400 leading-relaxed">Aggressive deployment of campaigns, technical fixes,
+                            and high-quality content assets.</p>
                     </div>
-
-                    <!-- Step 4 -->
-                    <div class="text-center group">
+                    <div class="text-center group reveal delay-400">
                         <div
-                            class="w-24 h-24 mx-auto bg-slate-800 border-4 border-slate-900 rounded-full flex items-center justify-center text-2xl font-bold text-indigo-400 mb-6 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300 relative z-10 shadow-xl">
+                            class="w-24 h-24 mx-auto bg-slate-900 border border-slate-700 rounded-2xl flex items-center justify-center text-3xl font-black text-pink-400 mb-8 group-hover:bg-pink-500 group-hover:text-white group-hover:border-pink-500 transition-all duration-300 shadow-xl group-hover:-translate-y-2 relative">
+                            <!-- success ring -->
+                            <div
+                                class="absolute inset-0 rounded-2xl border-2 border-pink-500/50 scale-110 opacity-0 group-hover:animate-ping">
+                            </div>
                             4
                         </div>
-                        <h4 class="text-xl font-bold mb-3">Optimization</h4>
-                        <p class="text-slate-400">Continuous testing, refining, and scaling for maximum ROI.</p>
+                        <h4 class="text-xl font-bold mb-3">Scale & Optimize</h4>
+                        <p class="text-slate-400 leading-relaxed">Continuous A/B testing, budget reallocation, and
+                            scaling what works for max ROI.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CASE STUDIES PREVIEW -->
-        <section class="py-24 bg-slate-50">
+        <!-- ===== CASE STUDIES PREVIEW ===== -->
+        <section class="py-28 section-alt relative">
             <div class="container mx-auto px-4 md:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal">
                     <div class="max-w-2xl">
-                        <h2 class="text-indigo-600 font-semibold tracking-wide uppercase text-sm mb-3">Success Stories
-                        </h2>
-                        <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Real results for real brands.</h3>
+                        <div class="section-badge mb-4">📈 Success Stories</div>
+                        <h3 class="text-4xl md:text-5xl font-black text-slate-900">Real results for <span
+                                class="block">real businesses.</span></h3>
                     </div>
                     <a href="case-studies.html"
-                        class="inline-flex items-center text-slate-900 font-bold hover:text-indigo-600 transition-colors">
-                        View All Work <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        class="flex items-center text-indigo-600 font-bold hover:text-pink-500 transition-colors bg-white px-6 py-3 rounded-full shadow-sm hover:shadow-md border border-slate-200">
+                        View All Playbooks <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
@@ -624,73 +670,97 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Case Study 1 -->
                     <div
-                        class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer border border-slate-100">
-                        <div class="h-48 bg-slate-200 relative overflow-hidden">
-                            <!-- Image abstract representation -->
+                        class="bg-white rounded-[1.5rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(79,70,229,0.12)] transition-all group border border-slate-200/60 reveal delay-100 flex flex-col h-full">
+                        <div
+                            class="h-56 bg-gradient-to-br from-indigo-500 to-purple-600 relative overflow-hidden flex items-center justify-center">
+                            <!-- Overlay -->
                             <div
-                                class="absolute inset-0 bg-gradient-to-tr from-indigo-500 to-purple-500 opacity-80 group-hover:scale-105 transition-transform duration-500">
+                                class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500">
                             </div>
+                            <!-- Image abstract representation -->
+                            <svg class="w-24 h-24 text-white opacity-20 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-700"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" />
+                            </svg>
+
                             <div
-                                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">
-                                E-Commerce</div>
+                                class="absolute top-5 left-5 bg-white backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-black text-indigo-700 uppercase tracking-wide shadow-sm">
+                                E-Commerce
+                            </div>
                         </div>
-                        <div class="p-6">
+                        <div class="p-8 flex flex-col flex-grow">
                             <h4
-                                class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
-                                TechGear Scaling</h4>
-                            <p class="text-slate-600 mb-4 text-sm">How we increased organic revenue by 240% in 6 months
-                                using advanced entity SEO.</p>
-                            <div class="flex items-center justify-between border-t border-slate-100 pt-4 mt-4">
-                                <div class="text-sm font-bold text-indigo-600">+240% Revenue</div>
-                                <div class="text-sm font-bold text-pink-500">Page 1 Rankings</div>
+                                class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                                TechGear Scale</h4>
+                            <p class="text-slate-500 mb-6 leading-relaxed flex-grow">How we increased organic SaaS
+                                revenue by 240% in 6 months using advanced programmatic SEO and entity silos.</p>
+                            <div class="flex items-center justify-between border-t border-slate-100 pt-5 mt-auto">
+                                <div class="text-sm font-black text-indigo-600">+240% Revenue</div>
+                                <div class="text-sm font-bold text-pink-500 text-right">Page 1 Domination</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Case Study 2 -->
                     <div
-                        class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer border border-slate-100">
-                        <div class="h-48 bg-slate-200 relative overflow-hidden">
+                        class="bg-white rounded-[1.5rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(79,70,229,0.12)] transition-all group border border-slate-200/60 reveal delay-200 flex flex-col h-full">
+                        <div
+                            class="h-56 bg-gradient-to-br from-blue-500 to-cyan-400 relative overflow-hidden flex items-center justify-center">
                             <div
-                                class="absolute inset-0 bg-gradient-to-tr from-blue-500 to-teal-500 opacity-80 group-hover:scale-105 transition-transform duration-500">
+                                class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500">
                             </div>
+                            <svg class="w-24 h-24 text-white opacity-20 transform group-hover:scale-110 group-hover:-rotate-6 transition-all duration-700"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13.5h-13L12 6.5z" />
+                            </svg>
+
                             <div
-                                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">
-                                B2B SaaS</div>
+                                class="absolute top-5 left-5 bg-white backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-black text-blue-700 uppercase tracking-wide shadow-sm">
+                                B2B SaaS
+                            </div>
                         </div>
-                        <div class="p-6">
+                        <div class="p-8 flex flex-col flex-grow">
                             <h4
-                                class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
+                                class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
                                 CloudSync Leads</h4>
-                            <p class="text-slate-600 mb-4 text-sm">Slashing CPA by 55% while doubling lead volume
-                                through LinkedIn Ads and PPC.</p>
-                            <div class="flex items-center justify-between border-t border-slate-100 pt-4 mt-4">
-                                <div class="text-sm font-bold text-indigo-600">-55% CPA</div>
-                                <div class="text-sm font-bold text-pink-500">2x Lead Vol.</div>
+                            <p class="text-slate-500 mb-6 leading-relaxed flex-grow">Slashing Customer Acquisition Cost
+                                (CAC) by 55% while doubling qualified demo volume through LinkedIn Ads and intent-based
+                                PPC.</p>
+                            <div class="flex items-center justify-between border-t border-slate-100 pt-5 mt-auto">
+                                <div class="text-sm font-black text-indigo-600">-55% CAC</div>
+                                <div class="text-sm font-bold text-pink-500 text-right">2x Lead Velocity</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Case Study 3 -->
                     <div
-                        class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer border border-slate-100 hidden lg:block">
-                        <div class="h-48 bg-slate-200 relative overflow-hidden">
+                        class="bg-white rounded-[1.5rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(79,70,229,0.12)] transition-all group border border-slate-200/60 reveal delay-300 hidden lg:flex flex-col h-full">
+                        <div
+                            class="h-56 bg-gradient-to-br from-orange-400 to-pink-500 relative overflow-hidden flex items-center justify-center">
                             <div
-                                class="absolute inset-0 bg-gradient-to-tr from-orange-400 to-pink-500 opacity-80 group-hover:scale-105 transition-transform duration-500">
+                                class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500">
                             </div>
+                            <svg class="w-24 h-24 text-white opacity-20 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-700"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+
                             <div
-                                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">
-                                Local Business</div>
+                                class="absolute top-5 left-5 bg-white backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-black text-pink-600 uppercase tracking-wide shadow-sm">
+                                Local SEO
+                            </div>
                         </div>
-                        <div class="p-6">
+                        <div class="p-8 flex flex-col flex-grow">
                             <h4
-                                class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
+                                class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
                                 Dental Group Growth</h4>
-                            <p class="text-slate-600 mb-4 text-sm">Dominating local map packs to generate 300+ new
-                                patient phone calls monthly.</p>
-                            <div class="flex items-center justify-between border-t border-slate-100 pt-4 mt-4">
-                                <div class="text-sm font-bold text-indigo-600">#1 Local Rank</div>
-                                <div class="text-sm font-bold text-pink-500">300+ Calls/mo</div>
+                            <p class="text-slate-500 mb-6 leading-relaxed flex-grow">Dominating local Google Map Packs
+                                in 3 cities to generate 300+ new high-value patient phone calls every single month.</p>
+                            <div class="flex items-center justify-between border-t border-slate-100 pt-5 mt-auto">
+                                <div class="text-sm font-black text-indigo-600">#1 Local Maps</div>
+                                <div class="text-sm font-bold text-pink-500 text-right">300+ Calls / Mo</div>
                             </div>
                         </div>
                     </div>
@@ -698,31 +768,36 @@
             </div>
         </section>
 
-        <!-- CTA BANNER -->
-        <section class="py-20 bg-slate-50 relative overflow-hidden">
-            <div class="container mx-auto px-4 relative z-10">
-                <div class="bg-indigo-600 rounded-3xl p-8 md:p-16 text-center shadow-2xl overflow-hidden relative">
-                    <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 transform translate-x-1/2 -translate-y-1/2">
-                    </div>
-                    <div
-                        class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 transform -translate-x-1/2 translate-y-1/2">
-                    </div>
+        <!-- ===== CTA BANNER ===== -->
+        <section class="py-24 bg-white relative overflow-hidden">
+            <div class="container mx-auto px-4 relative z-10 reveal">
+                <div class="gradient-border max-w-5xl mx-auto shadow-2xl">
+                    <div class="gradient-border-inner p-10 md:p-16 lg:p-20 text-center relative overflow-hidden">
+                        <!-- Abstract bg inside CTA -->
+                        <div
+                            class="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-50 rounded-full mix-blend-multiply filter blur-3xl opacity-60 transform translate-x-1/2 -translate-y-1/2">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-pink-50 rounded-full mix-blend-multiply filter blur-3xl opacity-60 transform -translate-x-1/2 translate-y-1/2">
+                        </div>
 
-                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 relative z-10">Ready to dominate your
-                        industry?</h2>
-                    <p class="text-indigo-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto relative z-10">Stop losing
-                        customers to your competitors. Partner with us to build a digital marketing machine that prints
-                        ROI.</p>
+                        <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-6 relative z-10 tracking-tight">
+                            Ready to dominate your <span class="text-gradient">industry?</span></h2>
+                        <p
+                            class="text-slate-500 text-lg md:text-xl mb-12 max-w-2xl mx-auto relative z-10 leading-relaxed">
+                            Stop losing customers to competitors with inferior products. Partner with us to build a
+                            digital acquisition machine that prints ROI.</p>
 
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
-                        <a href="contact.html"
-                            class="w-full sm:w-auto px-8 py-4 bg-white text-indigo-600 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all btn-hover text-lg">
-                            Get Your Free Proposal
-                        </a>
-                        <span class="text-indigo-200">or</span>
-                        <a href="tel:+1234567890" class="text-white hover:underline font-medium">Call +1 (234)
-                            567-890</a>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-5 relative z-10">
+                            <a href="contact.html" class="btn-primary text-lg px-8 py-4">
+                                Get Your Free Proposal
+                            </a>
+                            <span class="text-slate-400 font-medium">or</span>
+                            <a href="tel:+1234567890"
+                                class="text-indigo-600 border-b-2 border-indigo-200 hover:border-indigo-600 font-bold transition-colors pb-1 text-lg">
+                                Call +1 (234) 567-890
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

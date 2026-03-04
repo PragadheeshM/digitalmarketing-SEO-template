@@ -116,19 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
     }
 
-    // ===== RTL TOGGLE =====
-    const rtlBtn = document.getElementById('rtl-toggle');
-    if (rtlBtn) {
-        const html = document.documentElement;
-        const updateRtlBtn = () => {
-            rtlBtn.textContent = html.dir === 'rtl' ? 'LTR' : 'RTL';
-        };
-        updateRtlBtn();
-        rtlBtn.addEventListener('click', () => {
-            html.dir = html.dir === 'rtl' ? 'ltr' : 'rtl';
-            updateRtlBtn();
-        });
-    }
+    // RTL toggle is handled by rtl-toggle.js
 
     // ===== SIMPLE COUNTDOWN (for coming soon pages) =====
     const countdownElement = document.getElementById('countdown');
