@@ -19,7 +19,7 @@
 
     <!-- HEADER -->
     <header id="navbar"
-        class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-white/90 backdrop-blur-md border-b border-slate-200/60 shadow-sm">
         <div class="container mx-auto px-4 md:px-6 lg:px-8">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center gap-2 group">
@@ -88,9 +88,7 @@
                         class="text-slate-500 hover:text-indigo-600 font-medium w-16 text-center transition-colors"></button>
                     <a href="login.html"
                         class="text-slate-600 hover:text-indigo-600 font-medium transition-colors px-4 py-2">Login</a>
-                    <a href="signup.html"
-                        class="bg-slate-900 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-indigo-600 transition-colors shadow-lg btn-hover">Get
-                        Started</a>
+                    <a href="signup.html" class="btn-primary text-sm py-2.5 px-5">Get Started</a>
                 </div>
                 <button id="mobile-menu-btn" class="lg:hidden text-slate-600 focus:outline-none"><svg class="h-6 w-6"
                         fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -152,13 +150,22 @@
         </div>
     </header>
 
-    <main class="flex-grow pt-24">
-        <!-- HEADER -->
-        <section class="bg-slate-900 text-white py-20 relative overflow-hidden">
+    <main class="flex-grow">
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero text-white">
             <div class="container mx-auto px-4 text-center relative z-10">
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Let's Talk Growth.</h1>
-                <p class="text-xl text-slate-300 max-w-2xl mx-auto">Ready to dominate your market? Fill out the form
-                    below and our strategists will be in touch.</p>
+                <div class="page-hero-breadcrumb justify-center">
+                    <a href="index.html">Home</a>
+                    <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span class="text-white/80">Contact</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight">Let's Talk <span
+                        class="text-gradient-light">Growth.</span></h1>
+                <p class="text-xl text-blue-200/80 max-w-2xl mx-auto leading-relaxed">
+                    Ready to dominate your market? Our strategists will respond within 4 business hours.
+                </p>
             </div>
         </section>
 

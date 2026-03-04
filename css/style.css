@@ -699,3 +699,232 @@ html[dir="rtl"] {
     letter-spacing: -0.03em;
     line-height: 1;
 }
+
+/* ===== SECTION UTILITIES ===== */
+.section-dark {
+    background: #0f172a;
+}
+
+.section-alt {
+    background: #f8fafc;
+}
+
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    background: rgba(79, 70, 229, 0.08);
+    color: #4f46e5;
+    border: 1px solid rgba(79, 70, 229, 0.2);
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* ===== GRADIENT BORDER CTA ===== */
+.gradient-border {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed, #ec4899);
+    border-radius: 2rem;
+    padding: 2px;
+}
+
+.gradient-border-inner {
+    background: white;
+    border-radius: calc(2rem - 2px);
+}
+
+/* ===== PAGE HERO BANNER (inner pages) ===== */
+.page-hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #140a2e 100%);
+    position: relative;
+    overflow: hidden;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.18) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Breadcrumb in page hero */
+.page-hero-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(165, 180, 252, 0.8);
+    margin-bottom: 1.25rem;
+}
+
+.page-hero-breadcrumb a {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.page-hero-breadcrumb a:hover {
+    color: white;
+}
+
+/* ===== PREMIUM PRICING CARD ===== */
+.pricing-card-premium {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card-premium:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 40px rgba(79, 70, 229, 0.12);
+}
+
+.pricing-card-premium.featured {
+    background: linear-gradient(145deg, #0f172a 0%, #1e1b4b 100%);
+    border-color: rgba(79, 70, 229, 0.3);
+    color: white;
+    box-shadow: 0 20px 60px rgba(79, 70, 229, 0.3);
+}
+
+.pricing-card-premium.featured:hover {
+    box-shadow: 0 30px 80px rgba(79, 70, 229, 0.4);
+    transform: translateY(-8px);
+}
+
+/* ===== TESTIMONIAL CARD (premium) ===== */
+.testimonial-card-premium {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card-premium:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(79, 70, 229, 0.1);
+}
+
+/* ===== CONTACT FORM ===== */
+.form-input-premium {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 0.875rem;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    background: white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.form-input-premium:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.form-input-premium::placeholder {
+    color: #94a3b8;
+}
+
+/* ===== REVEAL ANIMATION DELAYS (additions) ===== */
+.delay-400 {
+    transition-delay: 0.4s;
+}
+
+.delay-500 {
+    transition-delay: 0.5s;
+}
+
+/* ===== FAQ ACCORDION ===== */
+.faq-item {
+    border: 1.5px solid #e2e8f0;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: white;
+}
+
+.faq-item:hover {
+    border-color: #c7d2fe;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1.25rem 1.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1e293b;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.25rem;
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    display: none;
+}
+
+.faq-item.open .faq-question {
+    color: #4f46e5;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+.faq-item.open {
+    border-color: #c7d2fe;
+    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.07);
+}
+
+/* ===== CASE STUDY CARD ===== */
+.case-card {
+    background: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(79, 70, 229, 0.12);
+}

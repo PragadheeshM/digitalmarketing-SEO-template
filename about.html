@@ -19,7 +19,7 @@
 
     <!-- HEADER -->
     <header id="navbar"
-        class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-white/90 backdrop-blur-md border-b border-slate-200/60 shadow-sm">
         <div class="container mx-auto px-4 md:px-6 lg:px-8">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
@@ -112,9 +112,7 @@
                         class="text-slate-500 hover:text-indigo-600 font-medium w-16 text-center transition-colors"></button>
                     <a href="login.html"
                         class="text-slate-600 hover:text-indigo-600 font-medium transition-colors px-4 py-2">Login</a>
-                    <a href="signup.html"
-                        class="bg-slate-900 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-indigo-600 transition-colors shadow-lg btn-hover">Get
-                        Started</a>
+                    <a href="signup.html" class="btn-primary text-sm py-2.5 px-5">Get Started</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -188,52 +186,57 @@
         </div>
     </header>
 
-    <main class="flex-grow pt-24">
-        <!-- PAGE HEADER -->
-        <section class="bg-slate-900 text-white py-20 relative overflow-hidden">
-            <div class="absolute inset-0 z-0 opacity-20">
-                <div
-                    class="absolute -top-24 -right-24 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl">
-                </div>
-                <div
-                    class="absolute bottom-0 left-0 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl">
-                </div>
-            </div>
+    <main class="flex-grow">
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero text-white">
             <div class="container mx-auto px-4 text-center relative z-10">
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">About Nexus</h1>
-                <p class="text-xl text-slate-300 max-w-2xl mx-auto">We are an independent digital agency that builds
-                    bold brand experiences and implements aggressive growth strategies.</p>
+                <div class="page-hero-breadcrumb justify-center">
+                    <a href="index.html">Home</a>
+                    <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span class="text-white/80">About</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight">About <span
+                        class="text-gradient-light">Nexus</span></h1>
+                <p class="text-xl text-blue-200/80 max-w-2xl mx-auto leading-relaxed">
+                    We are an independent digital growth agency that builds bold brand experiences and implements
+                    aggressive, data-first marketing strategies.
+                </p>
             </div>
         </section>
 
         <!-- MISSION & VISION -->
-        <section class="py-20 bg-white">
+        <section class="py-24 bg-white">
             <div class="container mx-auto px-4 md:px-6 lg:px-8">
                 <div class="grid md:grid-cols-2 gap-16 items-center">
-                    <div>
-                        <h2 class="text-sm font-bold text-indigo-600 uppercase tracking-widest mb-2">Our Mission</h2>
-                        <h3 class="text-3xl font-bold text-slate-900 mb-6">Empowering brands to dominate the digital
-                            landscape.</h3>
-                        <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+                    <div class="reveal-left">
+                        <div class="section-badge mb-4">🎯 Our Mission</div>
+                        <h3 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">Empowering brands
+                            to <span class="text-gradient">dominate the digital</span> landscape.</h3>
+                        <p class="text-slate-500 mb-6 text-lg leading-relaxed">
                             Since 2018, we have been obsessed with finding the intersection between stunning design and
                             data-driven performance. We don't believe in vanity metrics; we believe in revenue growth.
                         </p>
-                        <p class="text-slate-600 leading-relaxed">
+                        <p class="text-slate-500 leading-relaxed">
                             Our vision is to be the premier growth partner for ambitious companies worldwide. We achieve
                             this by hiring top-tier talent, utilizing transparent reporting, and maintaining a culture
-                            of relentless innovation and split testing.
+                            of relentless innovation.
                         </p>
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center">
+                    <div class="grid grid-cols-2 gap-4 reveal-right">
+                        <div
+                            class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center hover:shadow-lg hover:border-indigo-100 transition-all">
                             <div class="text-4xl font-black text-indigo-600 mb-2">120+</div>
                             <div class="text-sm font-medium text-slate-500">Brands Scaled</div>
                         </div>
-                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center translate-y-8">
+                        <div
+                            class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center translate-y-8 hover:shadow-lg hover:border-pink-100 transition-all">
                             <div class="text-4xl font-black text-pink-500 mb-2">$50M+</div>
                             <div class="text-sm font-medium text-slate-500">Revenue Generated</div>
                         </div>
-                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center">
+                        <div
+                            class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center hover:shadow-lg hover:border-indigo-100 transition-all">
                             <div class="text-4xl font-black text-indigo-600 mb-2">45</div>
                             <div class="text-sm font-medium text-slate-500">Global Experts</div>
                         </div>
