@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const rtlToggleBtn = document.getElementById('rtl-toggle');
+    // Select all RTL toggle buttons (by class or the old ID)
+    const rtlToggleBtns = document.querySelectorAll('#rtl-toggle, .rtl-toggle');
     const htmlElement = document.documentElement;
 
     // Restore saved direction from localStorage
@@ -13,22 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
     </svg>`;
 
     function updateBtnContent(dir) {
-        if (!rtlToggleBtn) return;
+        if (!rtlToggleBtns.length) return;
         const nextLabel = dir === 'rtl' ? 'LTR' : 'RTL';
-        rtlToggleBtn.title = `Switch to ${nextLabel}`;
-        rtlToggleBtn.innerHTML = globeSVG;
+
+        rtlToggleBtns.forEach(btn => {
+            btn.title = `Switch to ${nextLabel}`;
+            btn.innerHTML = globeSVG;
+        });
     }
 
     // Set initial icon state
     updateBtnContent(savedDir);
 
-    if (rtlToggleBtn) {
-        rtlToggleBtn.addEventListener('click', () => {
+    rtlToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             const currentDir = htmlElement.getAttribute('dir') || 'ltr';
             const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
             htmlElement.setAttribute('dir', newDir);
             localStorage.setItem('nexus-dir', newDir);
             updateBtnContent(newDir);
         });
-    }
+    });
 });
